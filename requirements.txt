@@ -1,0 +1,19 @@
+# Driver Health Monitoring App - Environment & Runtime Requirements
+# Reference: Smart Steering Wheel Design of IoMT-Based Non-Invasive Driver Health Monitoring
+
+# Runtime
+node>=20.0.0
+npm>=10.0.0
+
+# Expo / React Native (installed via npm)
+expo>=54.0.0
+react-native>=0.81.0
+react>=19.0.0
+
+# Build tools (for APK/Android)
+eas-cli>=5.0.0
+
+# Hardware / firmware (ESP32)
+# Arduino IDE 2.x or PlatformIO
+# Firebase ESP Client library
+# MAX30105 library (SparkFun)

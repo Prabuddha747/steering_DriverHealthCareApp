@@ -1,31 +1,70 @@
 /**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
+ * Purple theme palette - light (white) and dark (soft, not black).
  */
 
 import { Platform } from 'react-native';
 
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
+const purple = {
+  primary: '#8b5cf6',
+  primaryDark: '#7c3aed',
+  primaryLight: '#a78bfa',
+};
+
+/** Light mode: white/off-white background with purple accents */
+export const PurpleThemeLight = {
+  ...purple,
+  background: '#faf9ff',
+  surface: '#ffffff',
+  card: '#f5f3ff',
+  text: '#1f2937',
+  textSecondary: '#6b7280',
+  border: '#e5e7eb',
+  error: '#ef4444',
+  success: '#22c55e',
+  warning: '#eab308',
+};
+
+/** Dark mode: soft dark gray (not black) with purple accents */
+export const PurpleThemeDark = {
+  ...purple,
+  background: '#2d2d3d',
+  surface: '#3d3d52',
+  card: '#454560',
+  text: '#ffffff',
+  textSecondary: '#a1a1aa',
+  border: '#4f4f64',
+  error: '#ef4444',
+  success: '#22c55e',
+  warning: '#eab308',
+};
+
+/** @deprecated Use PurpleThemeLight or PurpleThemeDark via useAppTheme */
+export const PurpleTheme = PurpleThemeDark;
+
+const tintColorLight = purple.primary;
+const tintColorDark = purple.primaryLight;
 
 export const Colors = {
   light: {
-    text: '#11181C',
-    background: '#fff',
+    text: PurpleThemeLight.text,
+    background: PurpleThemeLight.background,
     tint: tintColorLight,
-    icon: '#687076',
-    tabIconDefault: '#687076',
+    icon: PurpleThemeLight.textSecondary,
+    tabIconDefault: PurpleThemeLight.textSecondary,
     tabIconSelected: tintColorLight,
   },
   dark: {
-    text: '#ECEDEE',
-    background: '#151718',
+    text: PurpleThemeDark.text,
+    background: PurpleThemeDark.background,
     tint: tintColorDark,
-    icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
+    icon: PurpleThemeDark.textSecondary,
+    tabIconDefault: PurpleThemeDark.textSecondary,
     tabIconSelected: tintColorDark,
   },
 };
+
+/** Static fallback - use useAppTheme() for scheme-aware colors in screens. */
+export const AppColors = PurpleThemeLight;
 
 export const Fonts = Platform.select({
   ios: {
