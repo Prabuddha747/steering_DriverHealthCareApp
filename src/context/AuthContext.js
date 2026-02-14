@@ -1,3 +1,8 @@
+/**
+ * Auth context: user, role, loading, disabled, signIn, signOut.
+ * Subscribes to Firebase auth state and users/{uid} for role/active.
+ * Types declared in AuthContext.d.ts.
+ */
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { onAuthStateChanged, signInWithEmailAndPassword, signOut as fbSignOut } from 'firebase/auth';
 import { ref, set } from 'firebase/database';

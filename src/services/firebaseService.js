@@ -1,3 +1,7 @@
+/**
+ * Firebase service: all Firebase Realtime Database and Auth operations.
+ * Device control (ESP32), users (role/active), drivers, devices, sessions.
+ */
 import { ref, onValue, set, update, get } from 'firebase/database';
 import {
   createUserWithEmailAndPassword,

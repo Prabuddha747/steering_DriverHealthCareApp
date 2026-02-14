@@ -1,3 +1,8 @@
+/**
+ * Root layout for Driver Health App.
+ * Wraps the app with SafeAreaProvider, ThemeProvider, AuthProvider, and Stack navigation.
+ * Registers all screens: index (auth gate), intro, login, waiting, (driver), (admin).
+ */
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';

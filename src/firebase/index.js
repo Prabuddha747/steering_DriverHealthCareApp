@@ -1,3 +1,7 @@
+/**
+ * Firebase initialization. Config from .env (EXPO_PUBLIC_FIREBASE_*).
+ * Exports auth and db for use in services.
+ */
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getDatabase } from 'firebase/database';

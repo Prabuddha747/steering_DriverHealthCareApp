@@ -1,3 +1,7 @@
+/**
+ * Driver layout: drawer navigation with Refresh and Logout in header.
+ * Screens: Live Monitor, Session History, GSR Graph.
+ */
 import { Drawer } from 'expo-router/drawer';
 import { useRouter, usePathname } from 'expo-router';
 import { TouchableOpacity, Text, View, ActivityIndicator } from 'react-native';

@@ -1,3 +1,7 @@
+/**
+ * GSR graph: LineChart of Galvanic Skin Response over time.
+ * Requires at least 2 sessions. Uses react-native-chart-kit.
+ */
 import React, { useEffect, useMemo, useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, Dimensions } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';

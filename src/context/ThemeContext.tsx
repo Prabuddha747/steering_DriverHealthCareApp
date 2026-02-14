@@ -1,3 +1,7 @@
+/**
+ * Theme context: provides PurpleThemeLight or PurpleThemeDark based on system color scheme.
+ * Use useAppTheme() in screens to access colors.
+ */
 import React, { createContext, useContext } from 'react';
 import { PurpleThemeLight, PurpleThemeDark } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';

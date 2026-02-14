@@ -1,3 +1,7 @@
+/**
+ * Login screen: email/password authentication.
+ * Admin: admin123 / default password. Drivers: username (auto-appends @gmail.com) + password.
+ */
 import { useRouter } from "expo-router";
 import { useMemo, useState } from "react";
 import {
@@ -140,7 +144,8 @@ export default function LoginScreen() {
           <Image source={require("@/assets/images/app_logo1.png")} style={styles.logo} resizeMode="contain" />
           <Text style={styles.title}>Login</Text>
           <Text style={styles.hint}>
-            Admin or Drivers: username (adds @gmail.com automatically)
+            Admin or Drivers: 
+            {/* username (adds @gmail.com automatically) */}
           </Text>
           <TextInput
             style={styles.input}

@@ -1,3 +1,7 @@
+/**
+ * Admin layout: drawer navigation with Refresh and Logout in header.
+ * Screens: Dashboard, Create Driver, Devices, Export, Driver Details (hidden in drawer).
+ */
 import { Drawer } from 'expo-router/drawer';
 import { useRouter, usePathname } from 'expo-router';
 import { TouchableOpacity, Text, View, ActivityIndicator } from 'react-native';

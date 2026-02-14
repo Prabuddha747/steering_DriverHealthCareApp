@@ -1,3 +1,7 @@
+/**
+ * Evaluates device connection state from lastSeen timestamp.
+ * CONNECTED: <30s, STALE: 30-90s, OFFLINE: >90s or no data.
+ */
 import {
     STALE_THRESHOLD,
     OFFLINE_THRESHOLD,

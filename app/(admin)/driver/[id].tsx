@@ -1,3 +1,7 @@
+/**
+ * Driver details screen: view single driver's sessions and controls.
+ * Admin can start/stop reading, view session list, and export XLSX/CSV.
+ */
 import { useRouter, useLocalSearchParams, useNavigation } from 'expo-router';
 import { useEffect, useMemo, useState } from 'react';
 import {
@@ -63,7 +67,7 @@ export default function DriverDetailsScreen() {
   }, [driverUid]);
 
   useEffect(() => {
-    const unsub = listenDrivers((data) => {
+    const unsub = listenDrivers((data: Record<string, any>) => {
       const d = data?.[driverUid];
       const name = d?.username || d?.email || driverUid;
       setDriverName(name);

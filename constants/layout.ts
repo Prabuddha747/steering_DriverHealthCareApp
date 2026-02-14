@@ -1,3 +1,6 @@
+/**
+ * Responsive layout helpers: wp (width %), hp (height %), fs (font size), radius.
+ */
 import { Dimensions, PixelRatio } from 'react-native';
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');

@@ -1,3 +1,7 @@
+/**
+ * Driver live monitor: start/stop sensor reading, view live health data.
+ * Shows temperature, heart rate, SpO2, GSR. Uses assigned or test device.
+ */
 import React, { useEffect, useMemo, useState, useCallback } from 'react';
 import {
   View,
@@ -48,7 +52,7 @@ export default function DriverDashboardScreen() {
 
   // Resolve which device this driver uses (assigned or test)
   useEffect(() => {
-    const unsub = listenDevices((devices) => {
+    const unsub = listenDevices((devices: Record<string, any>) => {
       const list: { mac: string; type: string }[] = [];
       let assigned: string | null = null;
       Object.entries(devices || {}).forEach(([mac, data]: [string, any]) => {
@@ -73,14 +77,14 @@ export default function DriverDashboardScreen() {
 
   useEffect(() => {
     if (!deviceMac) return;
-    const unsub = listenDeviceStatus(deviceMac, (status) => {
+    const unsub = listenDeviceStatus(deviceMac, (status: { lastSeen?: number }) => {
       setConnectionState(evaluateConnection(status?.lastSeen));
     });
     return unsub;
   }, [deviceMac]);
 
   useEffect(() => {
-    const unsub = listenDrivers((data) => {
+    const unsub = listenDrivers((data: Record<string, any>) => {
       const d = data?.[uid];
       setDriverName(d?.username || d?.email || user?.email || '');
     });

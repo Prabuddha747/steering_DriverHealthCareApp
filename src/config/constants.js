@@ -1,3 +1,6 @@
+/**
+ * App-wide constants: connection states, thresholds, admin defaults, sensor countdown.
+ */
 export const CONNECTION_STATE = {
   CONNECTED: 'CONNECTED',
   STALE: 'STALE',

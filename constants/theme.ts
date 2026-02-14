@@ -1,5 +1,6 @@
 /**
- * Purple theme palette - light (white) and dark (soft, not black).
+ * Purple theme palette: light (white/off-white) and dark (soft gray).
+ * Used by ThemeContext and throughout the app for consistent styling.
  */
 
 import { Platform } from 'react-native';

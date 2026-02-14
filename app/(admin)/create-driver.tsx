@@ -1,3 +1,8 @@
+/**
+ * Create driver screen: add new driver accounts.
+ * Fields: username, email, driver password, admin password (for auth).
+ * Links existing Firebase Auth users if email + current password provided.
+ */
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import {

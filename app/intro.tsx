@@ -1,3 +1,7 @@
+/**
+ * Intro/landing screen shown when user is not logged in.
+ * Displays app logo, title, feature bullets, and Login button.
+ */
 import { useRouter } from 'expo-router';
 import { useMemo } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';

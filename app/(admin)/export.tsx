@@ -1,3 +1,8 @@
+/**
+ * Export data screen: export all drivers' session data as CSV.
+ * Format: Driver, Temperature, Heart Rate, SpO2, GSR, Timestamp, Date — one row per session.
+ * Shares file on native; downloads on web.
+ */
 import { useEffect, useMemo, useState } from 'react';
 import {
   View,

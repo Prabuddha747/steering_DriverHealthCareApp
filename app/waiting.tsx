@@ -1,3 +1,7 @@
+/**
+ * Waiting screen: shown when user is disabled or role is loading.
+ * Provides Refresh and Logout actions.
+ */
 import { useMemo } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';

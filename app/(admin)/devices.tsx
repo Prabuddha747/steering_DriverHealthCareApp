@@ -1,3 +1,7 @@
+/**
+ * Device manager: list ESP32 sensors, assign or set as test.
+ * Test devices are used by any driver; assigned devices are tied to one driver.
+ */
 import { useRouter } from 'expo-router';
 import { useEffect, useMemo, useState } from 'react';
 import {

@@ -1,3 +1,7 @@
+/**
+ * Admin dashboard: drivers overview and device summary.
+ * Shows total/active/disabled drivers, device list, and driver management actions (View, Disable).
+ */
 import { useRouter } from 'expo-router';
 import { useEffect, useMemo, useState } from 'react';
 import {
@@ -23,7 +27,7 @@ export default function AdminDashboardScreen() {
   const [devices, setDevices] = useState<Record<string, any>>({});
 
   useEffect(() => {
-    const unsubD = listenDrivers((data) => {
+    const unsubD = listenDrivers((data: Record<string, any>) => {
       const next: Record<string, DriverEntry> = {};
       Object.entries(data || {}).forEach(([uid, v]: [string, any]) => {
         next[uid] = { uid, username: v?.username, email: v?.email, active: v?.active !== false };
@@ -194,7 +198,7 @@ export default function AdminDashboardScreen() {
           <View style={styles.emptyBox}>
             <Text style={styles.empty}>No drivers in Driver management</Text>
             <Text style={styles.emptySub}>
-              driver1 & driver2 exist in Firebase Auth but need to be linked. Open Create driver from the menu and enter their email + current password to add them.
+              If driver exist in Firebase Auth but need to be linked. Open Create driver from the menu and enter their email + current password to add them.
             </Text>
           </View>
         ) : (

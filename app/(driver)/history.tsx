@@ -1,3 +1,7 @@
+/**
+ * Session history: list all past sessions (newest first).
+ * Each card shows timestamp and metrics (temp, HR, SpO2, GSR).
+ */
 import React, { useEffect, useMemo, useState } from 'react';
 import {
   View,

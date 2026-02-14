@@ -1,3 +1,7 @@
+/**
+ * Index screen: auth gate.
+ * Redirects based on auth state: intro (no user), waiting (disabled/loading), admin, or driver dashboard.
+ */
 import { useRouter } from 'expo-router';
 import { useEffect } from 'react';
 import { ActivityIndicator, View, StyleSheet } from 'react-native';
