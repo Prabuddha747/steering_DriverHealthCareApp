@@ -8,7 +8,7 @@ A mobile application for real-time driver health monitoring built on the Interne
 
 Driver fatigue and stress are leading contributors to road accidents worldwide. Traditional health monitoring systems often require wearable devices or intrusive sensors, which can distract drivers or discourage adoption. This application draws on research in smart steering wheel design and IoMT to deliver continuous, non-invasive monitoring through sensors embedded in the steering assembly.
 
-The system architecture aligns with the design principles described in *Smart Steering Wheel: Design of IoMT-Based Non-Invasive Driver Health Monitoring* (Khan et al., IET Intelligent Transport Systems, 2025), emphasizing:
+The system architecture emphasizes with:
 
 - Non-invasive physiological sensing
 - Real-time data aggregation and cloud sync
@@ -69,12 +69,7 @@ The application consists of three main components:
 
 ## Architecture
 
-```
-[ESP32 Sensors] ---> [Firebase Realtime DB] <--- [Mobile App (Admin/Driver)]
-        |                        |
-        |                        +-- Auth, Sessions, Devices, Control
-        +-- Heart rate, SpO2, Temp, GSR
-```
+![System Architecture](ArchitectureImage.png)
 
 ---
 
@@ -196,9 +191,3 @@ Download the APK from the EAS build URL when the build completes.
 ## License
 
 This project is for research and educational use. Ensure compliance with local regulations when deploying driver health monitoring systems.
-
----
-
-## Reference
-
-Khan et al., "Smart Steering Wheel: Design of IoMT-Based Non-Invasive Driver Health Monitoring," *IET Intelligent Transport Systems*, 2025.
